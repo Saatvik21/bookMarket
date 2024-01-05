@@ -18,14 +18,11 @@ export class SellerforgotpasswordComponent {
   }
  
   submitForm() {
-    // Handle form submission logic here
     if (this.form.valid) {
-      // Form is valid, proceed with your logic
       console.log('Form submitted with email:', this.email);
       alert("Reset link sent to your email");
       this.router.navigate(['/seller-login']);
     } else {
-      // Form is invalid, display error messages or take appropriate action
       console.log('Form is invalid');
       alert("enter a valid  email");
     }

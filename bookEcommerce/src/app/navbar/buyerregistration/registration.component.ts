@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/navbar/api.service';
- 
-
 
 @Component({
   selector: 'app-registration',
@@ -26,7 +24,7 @@ export class RegistrationComponent {
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phonenumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]], // Ensure exactly 10 digits
+      phonenumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]], 
       gender: ['', Validators.required],
       createPassword: ['', [Validators.required, Validators.minLength(8)]]
      });

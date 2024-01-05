@@ -1,4 +1,3 @@
-<!-- edit-book.component.html -->
 <div class="edit-book">
   <h2>Edit Books</h2>
 
@@ -36,8 +35,6 @@
   </table>
 </div>
 
-
-<!-- Display book details for editing -->
 <div *ngIf="selectedBookForEdit" class="form-container">
   <h2>Edit Book</h2>
   <form  (ngSubmit)="saveEditedBook()">
@@ -58,12 +55,6 @@
       <input type="text" id="image" formControlName="image" [(ngModel)]="selectedBookForEdit.image" name="image" class="form-control" placeholder="Enter image url ">
     </div>
  
-    <!-- Display the selected image (for preview, optional)
-    <div *ngIf="editedImageData" class="image-preview">
-      <img [src]="editedImageData" alt="Selected Image" />
-    </div> -->
- 
-
     <button type="submit">Save</button>
   </form>
 </div>

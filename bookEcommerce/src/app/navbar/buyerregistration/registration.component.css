@@ -1,4 +1,4 @@
-/* registration.component.css */
+
 .form-container {
   max-width: 400px;
   margin: 0 auto;
@@ -49,6 +49,6 @@ button {
   margin-top: 5px;
 }
 .success-snackbar {
-  background-color: #4caf50; /* Green color, adjust as needed */
-  color: #fff; /* White text */
+  background-color: #4caf50;
+  color: #fff;
 }

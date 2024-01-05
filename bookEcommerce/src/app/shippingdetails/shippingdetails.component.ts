@@ -26,12 +26,9 @@ export class ShippingDetailsComponent implements OnInit {
   }
  
   onSubmit(): void {
-    // Handle form submission logic here
     if (this.shippingForm.valid) {
-      // Form is valid, proceed with your logic
       console.log('Form submitted with values:', this.shippingForm.value);
     } else {
-      // Form is invalid, display error messages or take appropriate action
       console.log('Form is invalid');
       alert("Please enter a valid shipping details");
     }

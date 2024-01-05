@@ -9,7 +9,6 @@ import { ApibookService } from './add-book/apibook.service';
 export class BookService {
  
   private books: any[] = [];
-  // Replace 'any[]' with your book model interface if you have one
   private addedBooks: any[] = [];
  
   constructor(private apiBookService: ApibookService) {}
@@ -25,16 +24,7 @@ export class BookService {
   }
  
   updateBook(bookId: number, updatedBook: any) {
- 
     return this.apiBookService.addBook(updatedBook);
-   
- 
-    // const index = this.books.findIndex((book) => book.id === bookId);
-    // if (index !== -1) {
-    //   this.books[index] = updatedBook;
-    // }
- 
- 
   }
  
   deleteBook(bookId: number): void {

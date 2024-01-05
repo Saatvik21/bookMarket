@@ -1,4 +1,4 @@
-// user.service.ts
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8080/api/auth'; // Replace with your actual backend API URL
+  private baseUrl = 'http://localhost:8080/api/auth'; 
  
   constructor(private http: HttpClient) {}
  
@@ -18,5 +18,4 @@ export class AuthService {
   getUserRole(): Observable<string> {
     return this.http.get<string>(`${this.baseUrl}/api/auth/user-role`);
   }
-  // You may want to add other authentication-related methods like logout, token validation, etc.
 }

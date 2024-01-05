@@ -3,7 +3,6 @@
       <div class="col-md-6">
         <h2>Shipping Details</h2>
         <form [formGroup]="shippingForm" (ngSubmit)="onSubmit()">
-          <!-- Full Name input -->
           <div class="form-group">
             <label for="fullName">Full Name</label>
             <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" formControlName="fullName">
@@ -11,8 +10,6 @@
               Full Name is required.
             </div>
           </div>
- 
-          <!-- Address input -->
           <div class="form-group">
             <label for="address">Address</label>
             <input type="text" class="form-control" id="address" placeholder="Enter your address" formControlName="address">
@@ -20,8 +17,6 @@
               Address is required.
             </div>
           </div>
- 
-          <!-- City input -->
           <div class="form-group">
             <label for="city">City</label>
             <input type="text" class="form-control" id="city" placeholder="Enter your city" formControlName="city">
@@ -29,8 +24,6 @@
               City is required.
             </div>
           </div>
- 
-          <!-- Postal Code input -->
           <div class="form-group">
             <label for="postalCode">Postal Code</label>
             <input type="text" class="form-control" id="postalCode" placeholder="Enter your postal code" formControlName="postalCode">
@@ -42,8 +35,6 @@
             </div>
           </div>
           <br>
- 
-          <!-- Submit button -->
           <div>
             <button type="submit" class="btn btn-primary" (click)="payment()">Procced To Payment</button>
           </div>

@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
 
       this.authService.login(user).subscribe({
         next: (response) => {
-          // Handle successful login (e.g., store token, redirect to home, etc.)
           if (response) {
             console.log('Login successful', response);
             alert('Login successful');
@@ -37,7 +36,6 @@ export class LoginComponent implements OnInit {
           }
         },
         error: (error) => {
-          // Handle login error (e.g., display error message)
           console.error('Login failed', error);
           alert('Login Failed');
         }
@@ -45,7 +43,6 @@ export class LoginComponent implements OnInit {
     } else {
       console.log('Form is not valid');
       alert('Form not Valid');
-      // You can also show an error message to the user here
     }
   }
 }

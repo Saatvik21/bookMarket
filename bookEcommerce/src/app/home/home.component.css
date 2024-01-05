@@ -1,4 +1,4 @@
-/* home.component.css */
+
 .home {
   text-align: center;
   margin-top: 20px;
@@ -7,11 +7,10 @@
 .home h1 {
   color: #333;
 }
-/* home.component.css */
 .books-container {
 display: flex;
 flex-wrap: wrap;
-justify-content: space-evenly; /* Use space-evenly to distribute space equally between items */
+justify-content: space-evenly; 
 margin: 20px;
 }
 
@@ -19,7 +18,7 @@ margin: 20px;
 border: 1px solid #ddd;
 padding: 20px;
 margin: 10px;
-width: 250px; /* Set a fixed width for each book card */
+width: 250px; 
 text-align: center;
 }
 
@@ -45,12 +44,12 @@ border: none;
 padding: 10px;
 margin-top: 10px;
 cursor: pointer;
-flex: 1; /* Each button takes equal width */
+flex: 1; 
 }
 
 .buy-now-button {
-background-color: #2196F3; /* Change color for Buy Now button */
-margin-left: 10px; /* Add a margin between buttons */
+background-color: #2196F3; 
+margin-left: 10px; 
 }
 .imagedimensions{
 width: 150px;

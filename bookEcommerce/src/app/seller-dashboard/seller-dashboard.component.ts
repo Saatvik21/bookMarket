@@ -9,17 +9,14 @@ export class SellerDashboardComponent {
   constructor(private router: Router) {}
 
   navigateToAddBook() {
-    // Navigate to the add book page
     this.router.navigate(['/add-book']);
   }
 
   navigateToEditBook() {
-    // Navigate to the edit book page
     this.router.navigate(['/edit-book']);
   }
 
   navigateToDeleteBook() {
-    // Navigate to the delete book page
     this.router.navigate(['/delete-book']);
   }
 

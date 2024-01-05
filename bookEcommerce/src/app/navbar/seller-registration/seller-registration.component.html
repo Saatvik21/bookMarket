@@ -1,4 +1,3 @@
-<!-- seller-registration.component.html -->
 <div class="form-container">
     <h2>Seller Registration Form</h2>
     <form (ngSubmit)="sellerregister()" [formGroup]="sellerRegistrationForm">
@@ -11,8 +10,7 @@
       <input type="email" id="email" formControlName="email" />
       <div *ngIf="sellerRegistrationForm.get('email')?.hasError('required')" class="error-message">* Required field</div>
       <div *ngIf="sellerRegistrationForm.get('email')?.hasError('email')" class="error-message">* Invalid email</div>
-  
-      <!-- Updated phone number field with validation -->
+
       <label for="phonenumber">Phone Number:</label>
       <input type="tel" id="phonenumber" formControlName="phonenumber" />
       <div *ngIf="sellerRegistrationForm.get('phonenumber')?.hasError('required')" class="error-message">* Required field</div>

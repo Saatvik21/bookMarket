@@ -1,0 +1,46 @@
+/* payment.component.css */
+ 
+.container {
+    margin-top: 50px;
+  }
+ 
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+ 
+  h2 {
+    text-align: center;
+  }
+ 
+  .form-group {
+    margin-bottom: 20px;
+  }
+ 
+  label {
+    font-weight: bold;
+  }
+ 
+  select, input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+ 
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+ 
+  button:hover {
+    background-color: #0056b3;
+  }
+ 
+  .text-danger {
+    color: #dc3545;
+  }
+ 

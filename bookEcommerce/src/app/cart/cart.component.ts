@@ -12,10 +12,7 @@ export class CartComponent implements OnInit{
   sum: number = 0;
   items = this.cartService.getItems();
   
-  shipping()
-  {
-    this.router.navigate(['/shipping'])
-  }
+  
   constructor(
     private cartService: CartService,
     private readonly router: Router
@@ -25,6 +22,10 @@ export class CartComponent implements OnInit{
     {
       this.sum=this.sum+Number(item.price);
     }
+  }
+  shipping()
+  {
+    this.router.navigate(['/shipping_details'])
   }
   
 }

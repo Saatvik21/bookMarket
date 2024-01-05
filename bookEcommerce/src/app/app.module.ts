@@ -18,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
  import { UserforgotpasswordComponent } from './navbar/buyerlogin/userforgotpassword/userforgotpassword.component';
 import { SellerforgotpasswordComponent } from './navbar/seller-login/sellerforgotpassword/sellerforgotpassword.component';
+import { PaymentComponent } from './payment/payment.component';
+import { ShippingDetailsComponent } from './shippingdetails/shippingdetails.component';
+
     
  
 @NgModule({
@@ -34,7 +37,10 @@ import { SellerforgotpasswordComponent } from './navbar/seller-login/sellerforgo
     EditBookComponent,
     CartComponent,
     UserforgotpasswordComponent,
-    SellerforgotpasswordComponent
+    SellerforgotpasswordComponent,
+    ShippingDetailsComponent,
+    PaymentComponent
+    
    ],
   imports: [
     BrowserModule,

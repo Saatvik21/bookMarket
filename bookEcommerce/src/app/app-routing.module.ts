@@ -11,6 +11,8 @@ import { SellerDashboardComponent } from './seller-dashboard/seller-dashboard.co
 import { CartComponent } from './cart/cart.component';
 import { UserforgotpasswordComponent } from './navbar/buyerlogin/userforgotpassword/userforgotpassword.component';
 import { SellerforgotpasswordComponent } from './navbar/seller-login/sellerforgotpassword/sellerforgotpassword.component';
+import { PaymentComponent } from './payment/payment.component';
+import { ShippingDetailsComponent } from './shippingdetails/shippingdetails.component';
 
 
 const routes: Routes = [
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'forgotpassword', component: UserforgotpasswordComponent},
   { path: 'forgotpasswordseller', component: SellerforgotpasswordComponent},
+  { path: 'shipping_details', component:ShippingDetailsComponent},
+  { path: 'payment', component:PaymentComponent}
    
 ];
 

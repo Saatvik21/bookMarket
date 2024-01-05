@@ -1,0 +1,42 @@
+<!-- registration.component.html -->
+<div class="form-container">
+  <h2>User Registration Form</h2>
+  <form (ngSubmit)="register()" [formGroup]="registrationForm">
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" formControlName="firstname" />
+    <div *ngIf="registrationForm.get('firstname')?.hasError('required')" class="error-message">* Required field</div>
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" formControlName="lastname" />
+    <div *ngIf="registrationForm.get('lastname')?.hasError('required')" class="error-message">* Required field</div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" />
+    <div *ngIf="registrationForm.get('email')?.hasError('required')" class="error-message">* Required field</div>
+    <div *ngIf="registrationForm.get('email')?.hasError('email')" class="error-message">* Invalid email</div>
+
+    <label for="phonenumber">Phone Number:</label>
+    <input type="tel" id="phonenumber" formControlName="phonenumber" />
+    <div *ngIf="registrationForm.get('phonenumber')?.hasError('required')" class="error-message">* Required field</div>
+    <div *ngIf="registrationForm.get('phonenumber')?.hasError('pattern')" class="error-message">* Invalid phone number (10 digits required)</div>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" formControlName="gender">
+      <option value="" disabled selected>Select gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    <div *ngIf="registrationForm.get('gender')?.hasError('required')" class="error-message">* Required field</div>
+
+    <label for="createPassword">Create Password:</label>
+    <input type="password" id="createPassword" formControlName="createPassword" />
+    <div *ngIf="registrationForm.get('createPassword')?.hasError('required')" class="error-message">* Required field</div>
+    <div *ngIf="registrationForm.get('createPassword')?.hasError('minlength')" class="error-message">* Minimum 8 characters</div>
+
+    
+
+    <div class="button-container">
+      <button type="submit">Register</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,58 @@
+/* home.component.css */
+.home {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home h1 {
+  color: #333;
+}
+/* home.component.css */
+.books-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly; /* Use space-evenly to distribute space equally between items */
+margin: 20px;
+}
+
+.book-card {
+border: 1px solid #ddd;
+padding: 20px;
+margin: 10px;
+width: 250px; /* Set a fixed width for each book card */
+text-align: center;
+}
+
+.book-image {
+max-width: 100%;
+height: auto;
+}
+
+.book-details {
+margin-top: 10px;
+}
+
+.button-container {
+display: flex;
+justify-content: space-between;
+}
+
+.add-to-cart-button,
+.buy-now-button {
+background-color: #4caf50;
+color: #fff;
+border: none;
+padding: 10px;
+margin-top: 10px;
+cursor: pointer;
+flex: 1; /* Each button takes equal width */
+}
+
+.buy-now-button {
+background-color: #2196F3; /* Change color for Buy Now button */
+margin-left: 10px; /* Add a margin between buttons */
+}
+.imagedimensions{
+width: 150px;
+height: 200px;
+}

@@ -1,0 +1,19 @@
+<!-- navbar.component.html -->
+<nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <span class="book-text">Book Market</span>
+        <a routerLink="/" class="nav-link">Home</a>
+      </div>
+      <div class="navbar-links">
+        <div class="navbar-search">
+          <input type="text" placeholder="Search...">
+          <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <a routerLink="/login" class="nav-link">Login</a>
+        <a routerLink="/seller-login" class="nav-link">Seller Login</a>
+        <button class="cart-button" (click)="viewCart()"><i class="fas fa-shopping-cart">Cart    </i></button>
+      </div>
+    </div>
+  </nav>
+  

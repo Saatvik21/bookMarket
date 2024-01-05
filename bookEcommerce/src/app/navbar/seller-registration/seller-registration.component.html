@@ -1,0 +1,33 @@
+<!-- seller-registration.component.html -->
+<div class="form-container">
+    <h2>Seller Registration Form</h2>
+    <form (ngSubmit)="sellerregister()" [formGroup]="sellerRegistrationForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" />
+      <div *ngIf="sellerRegistrationForm.get('name')?.hasError('required')" class="error-message">* Required field</div>
+  
+     
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" />
+      <div *ngIf="sellerRegistrationForm.get('email')?.hasError('required')" class="error-message">* Required field</div>
+      <div *ngIf="sellerRegistrationForm.get('email')?.hasError('email')" class="error-message">* Invalid email</div>
+  
+      <!-- Updated phone number field with validation -->
+      <label for="phonenumber">Phone Number:</label>
+      <input type="tel" id="phonenumber" formControlName="phonenumber" />
+      <div *ngIf="sellerRegistrationForm.get('phonenumber')?.hasError('required')" class="error-message">* Required field</div>
+      <div *ngIf="sellerRegistrationForm.get('phonenumber')?.hasError('pattern')" class="error-message">* Invalid phone number (10 digits required)</div>
+  
+      
+      <label for="createPassword">Create Password:</label>
+      <input type="password" id="createPassword" formControlName="createPassword" />
+      <div *ngIf="sellerRegistrationForm.get('createPassword')?.hasError('required')" class="error-message">* Required field</div>
+      <div *ngIf="sellerRegistrationForm.get('createPassword')?.hasError('minlength')" class="error-message">* Minimum 8 characters</div>
+  
+    
+      <div class="button-container">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+  

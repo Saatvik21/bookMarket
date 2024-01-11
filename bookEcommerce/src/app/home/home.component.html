@@ -1,0 +1,19 @@
+<div class="home">
+  <h1>Welcome to our Bookstore!</h1>
+  <div class="books-container">
+    <div *ngFor="let book of addedBooks" class="book-card">
+      <div class="book-details">
+        <div *ngIf="book.image" class="image-preview">
+          <img class="imagedimensions" [src]="book.image" alt="Book Image" />
+        </div><br>
+        <p>{{ book.bookName }}</p>
+        <p>{{ book.authorName }}</p>
+        <p>{{ book.description }}</p>
+        <p>Price: {{ book.price | currency: 'INR' }}</p>
+        <div class="button-container">
+          <button class="add-to-cart-button" (click)="addToCart(book)">Add to Cart</button>
+         
+        </div>
+    </div>
+  </div>
+</div>

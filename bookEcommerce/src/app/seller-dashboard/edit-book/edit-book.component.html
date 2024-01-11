@@ -1,0 +1,60 @@
+<div class="edit-book">
+  <h2>Edit Books</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Book ID</th>
+        <th>Book Name</th>
+        <th>Author Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of addedBooks">
+        <td>{{ book.id }}</td>
+        <td>{{ book.bookName }}</td>
+        <td>{{ book.authorName }}</td>
+        <td>{{ book.description }}</td>
+        <td>{{ book.price | currency:"INR" }}</td>
+        <td>
+          <div *ngIf="book.image" class="image-preview">
+            <img class="imagedimensions" [src]="book.image" alt="Book Image" />
+          </div>
+        </td>
+        <td>
+          <button (click)="editBookDetails(book)">Edit</button>
+          <button (click)="deleteBook(book.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+   
+  </table>
+</div>
+
+<div *ngIf="selectedBookForEdit" class="form-container">
+  <h2>Edit Book</h2>
+  <form  (ngSubmit)="saveEditedBook()">
+    <label for="editName">Name:</label>
+    <input type="text" id="editName" name="editName" [(ngModel)]="selectedBookForEdit.bookName" required />
+
+    <label for="editAuthor">Author:</label>
+    <input type="text" id="editAuthor" name="editAuthor" [(ngModel)]="selectedBookForEdit.authorName" required />
+
+    <label for="editDescription">Description:</label>
+    <textarea id="editDescription" name="editDescription" [(ngModel)]="selectedBookForEdit.description" required></textarea>
+
+    <label for="editPrice">Price:</label>
+    <input type="number" id="editPrice" name="editPrice" [(ngModel)]="selectedBookForEdit.price" required />
+
+    <div>
+      <label for="image">Image of the Place</label>
+      <input type="text" id="image" formControlName="image" [(ngModel)]="selectedBookForEdit.image" name="image" class="form-control" placeholder="Enter image url ">
+    </div>
+ 
+    <button type="submit">Save</button>
+  </form>
+</div>
